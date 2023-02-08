@@ -1,2 +1,2 @@
 #!/bin/bash
-cd "$(dirname "$current_dir")"
+cd -
