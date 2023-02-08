@@ -1,17 +1,2 @@
 #!/bin/bash
-
-# Check if the destination directory exists
-if [ ! -d "/tmp/my_first_directory" ]; then
-  # If it doesn't exist, create it
-  mkdir "/tmp/my_first_directory"
-fi
-
-# Move the file "betty" from "/tmp/" to "/tmp/my_first_directory"
-mv "/tmp/betty" "/tmp/my_first_directory"
-
-# Confirm the move was successful
-if [ $? -eq 0 ]; then
-  echo "The file 'betty' was successfully moved to '/tmp/my_first_directory'"
-else
-  echo "The file 'betty' could not be moved to '/tmp/my_first_directory'"
-fi
+mv "/tmp/betty" "/tmp/my_first_directory

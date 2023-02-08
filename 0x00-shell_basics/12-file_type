@@ -1,7 +1,0 @@
-#!/bin/bash
-if [ -f "/tmp/iamafile" ]; then
-  file_type=$(file "/tmp/iamafile")
-  echo "The file 'iamafile' is of type: $file_type"
-else
-  echo "The file 'iamafile' does not exist."
-fi
