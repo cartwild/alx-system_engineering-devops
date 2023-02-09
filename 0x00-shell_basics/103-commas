@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A | sort -t. -k1,1n -k2 | awk '{ printf("%s%s,", $0, ($0 ~ /\/$/ ? "/" : "") ) } END { print "" }'
+ls -a | awk '$1 ~ /^[0-9a-zA-Z]/ { printf("%s,", $0) } $1 ~ /^\./ { printf("%s,", $0) }' | sort | tr -d '\n' && echo
