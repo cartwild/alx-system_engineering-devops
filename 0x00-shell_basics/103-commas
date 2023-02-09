@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a | awk 'RS=" "; OFS=", "; /^\./ { print $0; next; } /\// { directories[$0]; next; } { files[$0]; } END { for (dir in directories) print dir; asort(files); for (file in files) print file; }'
+ls -a | awk 'BEGIN{RS=" ";OFS=", "}/^\./||/\//{print $0;next} {files[$0]}END{asort(files);for(file in files)print file}'
