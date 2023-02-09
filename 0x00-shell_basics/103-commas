@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -a | awk '$1 ~ /^[0-9a-zA-Z]/ { printf("%s,", $0) } $1 ~ /^\./ { printf("%s,", $0) }' | sort | tr -d '\n' && echo
+files=$(ls -a | awk '$1 ~ /^[0-9a-zA-Z]/ { printf("%s,", $0) } $1 ~ /^\./ { printf("%s,", $0) }')
+echo "$(echo $files | sort), "
