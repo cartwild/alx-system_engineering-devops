@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a | awk 'BEGIN{RS=" ";OFS=", "}/^\./||/\//{print $0;next} {files[$0]}END{asort(files);for(file in files)print file}'
+ls -a | awk '/^\./ {print} !/^\./ {print $0","}' | sort -t, -k1.1 | tr -d '\n'; echo
