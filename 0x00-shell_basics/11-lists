@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A -R --ignore=boot {.,..}/
+ls -la . .. /boot
