@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -A | sort -t. -k1,1n -k2 | awk '{ printf("%s%s,", $0, ($0 ~ /\/$/ ? "/" : "") ) } END { print "" }'
