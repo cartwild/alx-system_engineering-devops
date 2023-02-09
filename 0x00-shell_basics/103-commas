@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a | awk '/^\./ {print} !/^\./ {print $0","}' | sort -t, -k1.1 | tr -d '\n'; echo
+ls -map
