@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "Username of current user is: $(whoami)"
