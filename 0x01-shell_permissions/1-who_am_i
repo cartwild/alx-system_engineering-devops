@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "User $USER"
+echo root $USER
